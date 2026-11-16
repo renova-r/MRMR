@@ -21,7 +21,7 @@ OriginPeriodFromYears = function(OriginStartYears, OriginLength = years(1), Star
   
   #  if (is.null(OriginLength)) OriginLength = years(1)
   
-  if (class(OriginLength) != "Period") stop ("A Period object was not supplied with the OriginLength argument.")
+  if (class(OriginLength)[1L] != "Period") stop ("A Period object was not supplied with the OriginLength argument.")
   
   if (Verbose) warning("You've not supplied a date for the OriginStart. I'm going to assume that you've given me years.")
   

@@ -18,7 +18,7 @@
 #' 
 LatestDiagonal = function(x)
 {
-  if (class(x) == "Triangle") x = x@TriangleData
+  if (class(x)[1L] == "Triangle") x = x@TriangleData
   
   lOriginYear = dlply(x, "OriginPeriodStart")
   lOriginYear = lapply(lOriginYear, function(y) {
